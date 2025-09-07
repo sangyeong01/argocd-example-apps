@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    argocd.argoproj.io/tracking-id: test-hydrator-helm-2:/Service:/kustomize-guestbook-ui-hydrated
-  name: kustomize-guestbook-ui-hydrated
+    argocd.argoproj.io/tracking-id: test-hydrator-helm-2:/Service:/kustomize-guestbook-ui
+  name: kustomize-guestbook-ui
 spec:
   ports:
     - port: 80
@@ -15,8 +15,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    argocd.argoproj.io/tracking-id: test-hydrator-helm-2:apps/Deployment:/kustomize-guestbook-ui-hydrated
-  name: kustomize-guestbook-ui-hydrated
+    argocd.argoproj.io/tracking-id: test-hydrator-helm-2:apps/Deployment:/kustomize-guestbook-ui
+  name: kustomize-guestbook-ui
 spec:
   replicas: 1
   revisionHistoryLimit: 3
